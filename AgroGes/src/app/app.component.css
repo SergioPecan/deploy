@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  min-height: 80vh;
+}
+
+.sidenav-spacer {
+  width: 20dvw;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60dvw;
+}
