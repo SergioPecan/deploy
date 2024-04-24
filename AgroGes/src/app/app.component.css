@@ -1,15 +1,382 @@
-.wrapper {
-  display: flex;
-  min-height: 80vh;
+body {
+  font-family: Geneva, Arial, sans-serif; /* Cambia el tipo de letra a Geneva */
 }
 
-.sidenav-spacer {
-  width: 20dvw;
+
+/* Establece estilos predeterminados para todos los elementos */
+* {
+  margin: 0; /* Elimina los márgenes predeterminados */
+  padding: 0; /* Elimina el relleno predeterminado */
+  text-decoration: none; /* Elimina la decoración de texto predeterminada */
+  list-style: none; /* Elimina los estilos de la lista predeterminada */
+  box-sizing: border-box; /* Hace que el tamaño de los elementos incluya el relleno y el borde */
 }
 
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60dvw;
+/* Estilos para el encabezado */
+header {
+  position: sticky; /* Hace que el encabezado se mantenga fijo mientras se desplaza */
+  top: 0; /* Fija el encabezado en la parte superior de la ventana */
+  z-index: 1000; /* Controla el orden de apilamiento del encabezado */
 }
+
+/* Estilos para la barra de navegación */
+nav {
+  background: #00576F; /* Color de fondo de la barra de navegación */
+  height: 80px; /* Altura de la barra de navegación */
+  width: 100%; /* Ancho de la barra de navegación */
+}
+
+/* Estilos para la lista de elementos de navegación */
+nav ul {
+  float: right; /* Alinea la lista de elementos a la derecha */
+  margin-right: 20px; /* Margen derecho de la lista de elementos */
+}
+
+/* Estilos para cada elemento de la lista de navegación */
+nav ul li {
+  display: inline-block; /* Hace que los elementos de la lista se muestren en línea */
+  line-height: 80px; /* Alinea verticalmente el texto en el centro de la barra de navegación */
+  margin: 0 5px; /* Margen entre los elementos de la lista */
+}
+
+/* Estilos para los enlaces en la lista de navegación */
+nav ul li a {
+  color: #fff; /* Color del texto de los enlaces */
+  font-size: 18px; /* Tamaño de la fuente de los enlaces */
+  padding: 7px 13px; /* Relleno de los enlaces */
+  border-radius: 3px; /* Borde redondeado de los enlaces */
+  text-transform: capitalize; /* Transforma el texto a mayúsculas */
+}
+
+/* Estilos para la sección del banner */
+section.banner {
+  background: linear-gradient(to left, #00A6A6, #D9EAE5); /* Fondo degradado del banner */
+  padding: 3rem 0; /* Relleno del banner */
+}
+
+/* Estilos para el contenedor del banner */
+.containerB {
+  width: 90%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: grid; /* Usa un diseño de cuadrícula para el contenedor */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Distribuye los elementos de forma automática */
+  grid-gap: 2rem; /* Espacio entre los elementos de la cuadrícula */
+}
+
+/* Estilos para la primera columna del banner */
+.col1 {
+  display: flex; /* Hace que los elementos de la columna se muestren en línea */
+  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: center; /* Alinea los elementos horizontalmente */
+}
+
+/* Estilos para la imagen del banner */
+.imgBanner {
+  width: 70%; /* Ancho de la imagen */
+}
+
+/* Estilos para la segunda columna del banner */
+.col2 {
+  padding: 1rem 2rem; /* Relleno de la segunda columna */
+  display: flex; /* Hace que los elementos de la columna se muestren en línea */
+  justify-content: center; /* Alinea los elementos horizontalmente */
+  flex-direction: column; /* Muestra los elementos en columna */
+}
+
+/* Estilos para el título del banner */
+h1 {
+  font-size: 2rem; /* Tamaño del título */
+  color: #00576F; /* Color del título */
+}
+
+/* Estilos para el texto del banner */
+#txtBanner {
+  margin: 2rem 0; /* Margen del texto */
+  font-size: 1.3rem; /* Tamaño del texto */
+  line-height: 2rem; /* Altura de línea del texto */
+  text-align: justify; /* Alineación justificada del texto */
+}
+
+/* Estilos para el botón del banner */
+.btnBanner {
+  background: #00576F; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Relleno del botón */
+  border-radius: 20px; /* Borde redondeado del botón */
+  text-decoration: none; /* Elimina la decoración de texto */
+}
+
+/* Estilos para la sección de servicios */
+.services {
+  padding: 3rem 0; /* Relleno de la sección de servicios */
+  text-align: center; /* Alinea el contenido al centro */
+}
+
+/* Estilos para el subtítulo de servicios */
+.subServices {
+  text-align: center; /* Alinea el texto al centro */
+  padding-bottom: 3rem; /* Espacio inferior del subtítulo */
+  color: #0074E4; /* Color del texto */
+}
+
+/* Estilos para el contenedor de servicios */
+.containerS {
+  width: 90%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: grid; /* Usa un diseño de cuadrícula para el contenedor */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Distribuye los elementos de forma automática */
+  grid-gap: 3rem; /* Espacio entre los elementos de la cuadrícula */
+}
+
+/* Estilos para los cuadros de servicios */
+.boxS {
+  padding: 2rem; /* Relleno de los cuadros */
+  display: flex; /* Hace que los elementos de los cuadros se muestren en línea */
+  flex-direction: column; /* Muestra los elementos en columna */
+  align-items: center; /* Alinea los elementos al centro */
+  justify-content: center; /* Alinea los elementos al centro */
+  box-shadow: 0px 0px 55px 5px rgba(0, 0, 255, 0.2); /* Sombra de los cuadros */
+  border-radius: 10px; /* Borde redondeado de los cuadros */
+}
+
+/* Estilos para las imágenes de los cuadros de servicios */
+.boxS img {
+  width: 300px; /* Ancho de las imágenes */
+  margin-bottom: 1rem; /* Margen inferior de las imágenes */
+}
+
+/* Estilos para los títulos de los cuadros de servicios */
+h3 {
+  color: #00576F; /* Color del título */
+  font-size: 1.5rem; /* Tamaño del título */
+  margin-bottom: 1rem; /* Margen inferior del título */
+}
+
+/* Estilos para los textos de los cuadros de servicios */
+.boxS p {
+  text-align: justify; /* Alineación justificada del texto */
+  font-size: 1rem; /* Tamaño del texto */
+}
+
+/* Estilos para el subtítulo de servicios */
+.subServices h2 {
+  color: #00576F; /* Color del subtítulo */
+  font-size: 2rem; /* Tamaño del subtítulo */
+  margin-bottom: 1.5rem; /* Margen inferior del subtítulo */
+}
+
+/* Estilos para la sección de equipo */
+section.equipo {
+  background: linear-gradient(to left, #FFFFFF, #00576F); /* Fondo degradado de la sección de equipo */
+  padding: 3rem 0; /* Relleno de la sección de equipo */
+  display: flex; /* Hace que los elementos de la sección se muestren en línea */
+  justify-content: center; /* Alinea los elementos horizontalmente */
+  align-items: center; /* Alinea los elementos verticalmente */
+}
+
+/* Estilos para el contenedor de equipo */
+.containerE {
+  width: 90%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: grid; /* Usa un diseño de cuadrícula para el contenedor */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Distribuye los elementos de forma automática */
+  grid-gap: 2rem; /* Espacio entre los elementos de la cuadrícula */
+}
+
+/* Estilos para los cuadros de equipo */
+.boxE {
+  padding: 1rem 2rem; /* Relleno de los cuadros */
+  display: flex; /* Hace que los elementos de los cuadros se muestren en línea */
+  justify-content: center; /* Alinea los elementos horizontalmente */
+  flex-direction: column; /* Muestra los elementos en columna */
+  text-align: center; /* Alineación del texto al centro */
+  box-shadow: 0px 0px 55px 5px rgba(0, 255, 0, 0.2); /* Sombra de los cuadros */
+}
+
+/* Estilos para la imagen de equipo */
+.imgEquipo {
+  width: 70%; /* Ancho de la imagen */
+  align-self: center; /* Alinea la imagen al centro */
+}
+
+/* Estilos para el título de equipo */
+h1 {
+  font-size: 2rem; /* Tamaño del título */
+  color: #00576F; /* Color del título */
+  margin-top: 1rem; /* Margen superior del título */
+}
+
+/* Estilos para el texto de equipo */
+#txtEquipo {
+  margin: 2rem 0; /* Margen del texto */
+  font-size: 1.3rem; /* Tamaño del texto */
+  line-height: 2rem; /* Altura de línea del texto */
+  text-align: justify; /* Alineación justificada del texto */
+}
+
+
+
+/* Estilos para la sección de Tarifas */
+.Tarifas {
+  padding: 3rem 0; /* Relleno de la sección de Tarifas */
+  text-align: center; /* Alinea el contenido al centro */
+}
+
+/* Estilos para el subtítulo de Tarifas */
+.subTarifas h2 {
+  color: #00576F; /* Color del texto del título */
+  font-size: 2rem; /* Tamaño del texto del título */
+  margin-bottom: 1.5rem; /* Margen inferior del título */
+}
+
+
+/* Estilos para el texto que sigue al título de Tarifas */
+.subTarifas p {
+  text-align: center; /* Alinea el texto al centro */
+  color: #FFFFFF; /* Color del texto */
+  font-size: 1rem; /* Tamaño del texto */
+  margin-bottom: 3rem; /* Margen inferior del texto */
+  max-width: 800px; /* Ancho máximo del contenedor del texto */
+  margin-left: auto; /* Margen izquierdo automático para centrar */
+  margin-right: auto; /* Margen derecho automático para centrar */
+}
+
+
+
+
+/* Estilos para el contenedor de las tarifas */
+.containerT {
+  display: flex; /* Muestra los cuadros de tarifas en línea */
+  justify-content: space-around; /* Distribuye los cuadros de tarifas uniformemente */
+  align-items: center; /* Alinea los cuadros de tarifas verticalmente */
+}
+
+/* Estilos para los cuadros de tarifas */
+.boxT {
+  background-color: #FFFFFF; /* Color de fondo de los cuadros de tarifas */
+  border-radius: 10px; /* Borde redondeado de los cuadros de tarifas */
+  padding: 2rem; /* Relleno de los cuadros de tarifas */
+  width: 30%; /* Ancho de los cuadros de tarifas */
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.1); /* Sombra de los cuadros de tarifas */
+}
+
+/* Estilos para los títulos de las tarifas */
+.boxT h3 {
+  color: #00576F; /* Color del título de las tarifas */
+  font-size: 1.5rem; /* Tamaño del título de las tarifas */
+  margin-bottom: 1rem; /* Margen inferior del título de las tarifas */
+}
+
+/* Estilos para los precios de las tarifas */
+.boxT h3:last-child {
+  color: #00576F; /* Color del precio de las tarifas */
+  font-size: 2rem; /* Tamaño del precio de las tarifas */
+  margin-top: 1rem; /* Margen superior del precio de las tarifas */
+}
+
+/* Estilos para la lista de características de las tarifas */
+.boxT ul {
+  list-style-type: none; /* Elimina los estilos de lista */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-left: 0; /* Elimina el relleno izquierdo */
+}
+
+/* Estilos para los elementos de la lista de características de las tarifas */
+.boxT ul li {
+  margin-bottom: 0.5rem; /* Margen inferior de los elementos de la lista */
+}
+
+
+
+
+/* Estilos para la sección de contacto */
+.contact {
+  background-color: #FFFFFF; /* Color de fondo */
+  padding: 3rem 0; /* Relleno */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para el contenedor de la sección de contacto */
+.contact-container {
+  width: 90%; /* Ancho del contenedor */
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Estilos para el título de la sección de contacto */
+.contact-title {
+  color: #00576F; /* Color del título */
+  font-size: 2rem; /* Tamaño del título */
+  margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* Estilos para los campos de formulario */
+.form-group {
+  margin-bottom: 1.5rem; /* Margen inferior */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para las etiquetas de formulario */
+.form-group label {
+  display: block; /* Mostrar como bloque */
+  margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* Estilos para los campos de entrada */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%; /* Ancho completo */
+  padding: 0.5rem; /* Relleno */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 5px; /* Borde redondeado */
+}
+
+/* Estilos para el botón de envío */
+form button[type="submit"] {
+  background-color: #00576F; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 0.5rem 2rem; /* Relleno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor de puntero */
+  transition: background-color 0.3s; /* Transición de color de fondo */
+}
+
+/* Estilos para el botón de envío al pasar el ratón */
+form button[type="submit"]:hover {
+  background-color: #003A4E; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para el mensaje de éxito */
+#mensaje-exito {
+  display: none; /* Ocultar por defecto */
+  margin-top: 1rem; /* Margen superior */
+  color: #008000; /* Color del texto */
+}
+.nav-buttons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.nav-buttons li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.nav-buttons li a {
+  display: inline-block;
+  padding: 5px 20px; /* Modificado el valor del padding vertical */
+  line-height: 2; /* Reducir la altura del texto dentro del botón */
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.nav-buttons li a:hover {
+  background-color: #555;
+}
+

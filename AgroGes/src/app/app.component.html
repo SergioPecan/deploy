@@ -1,9 +1,157 @@
-<app-header></app-header>
-<div class="wrapper">
-  <div class="sidenav-spacer">
-  </div>
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-</div>
-<app-footer></app-footer>
+
+<body>
+<link rel="stylesheet" href="app.component.css/">
+<header>
+  <nav>
+    <ul class="nav-buttons">
+      <li><a href="#">Sign Up</a></li>
+      <li><a href="#">Log In</a></li>
+    </ul>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!--HOME-->
+  <section id="home" class="banner">
+    <div class="containerB row">
+      <div class="boxB col1-md-5 col12">
+        <img src="Images/Agroges_logo.png" class="imgBanner" alt="">
+      </div>
+      <div class="boxB col2">
+        <h1>AgroGes</h1>
+        <p id="txtBanner">
+          At AgroGes, we are committed to the growth and success of small and medium farmers. Our comprehensive platform offers accurate technical information and specialized advice to optimize your crops.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!--SERVICES-->
+  <section id="services" class="services">
+    <div class="subServices">
+      <h2>Our Services</h2>
+      <p>
+        AgroGes offers a wide range of services designed specifically to support your agricultural activity. We stand out for our dedication to your success and our commitment to continuous innovation in the agricultural sector. <br> We grow with you.
+      </p>
+    </div>
+    <div class="containerS">
+      <div class="boxS">
+        <img src="Images/Consultancy.jpg" alt="">
+        <h3>Agricultural Consulting</h3>
+        <p>
+          Access expert advice at all stages of your agricultural production, from planting to harvesting.
+        </p>
+      </div>
+      <div class="boxS">
+        <img src="Images/Planning.jpg" alt="">
+        <h3>Crop Planning</h3>
+        <p>
+          We help you optimize your crops through recommendations on ideal seasons, most suitable varieties, and planting practices.
+        </p>
+      </div>
+      <div class="boxS">
+        <img src="Images/pests.jpg" alt="">
+        <h3>Pest and Disease Control</h3>
+        <p>
+          Get effective strategies for integrated pest and disease management, thus protecting the health of your crops.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!--Team-->
+  <section id="team" class="team">
+    <div class="containerE row">
+      <div class="boxE col1-md-5 col12">
+        <img src="Images/team.jpg" class="imgTeam" alt="">
+      </div>
+      <div class="boxB col2">
+        <h1>Team Lux</h1>
+        <p id="txtBanner">
+          Our AgroGes team is composed of a diverse group of individuals with a shared passion for innovation and software development. From Favio, Gustavo, Daniel, Sergio, and Andrea, each brings their own perspective and unique set of skills to the team. We strive to work collaboratively, leveraging our individual strengths to deliver the best possible experience to our users. With dedication and commitment, we are here to ensure that every interaction with our platform is exceptional. Together, we will give our best to ensure a truly exceptional experience for our users.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!--Pricing-->
+  <section id="pricing" class="Pricing">
+    <div class="subPricing">
+      <h2>Our Pricing</h2>
+      <p>
+        At AgroGes, we understand that agricultural needs vary from one client to another. Therefore, we offer flexible subscription plans that adapt to your specific requirements. Our plans are designed to accommodate the number of advisors you need to efficiently manage your agricultural production.
+      </p>
+    </div>
+    <div class="containerT">
+      <div class="boxT">
+        <h3>Basic Plan</h3>
+        <ul>
+          <li>Crop management tools to manage your production</li>
+          <li>Weather forecasts</li>
+          <li>Pest alerts</li>
+          <li>Up to a maximum of 5 advisors to collaborate on your agricultural projects</li>
+        </ul>
+        <h3>$ 100</h3>
+      </div>
+      <div class="boxT">
+        <h3>Medium Plan</h3>
+        <ul>
+          <li>Crop management tools to manage your production</li>
+          <li>Weather forecasts</li>
+          <li>Pest alerts</li>
+          <li>Expanded capabilities to work with a larger team</li>
+          <li>Possibility to add up to 10 advisors in managing your crops</li>
+        </ul>
+        <h3>$ 200</h3>
+      </div>
+      <div class="boxT">
+        <h3>Premium Plan</h3>
+        <ul>
+          <li>Crop management tools to manage your production</li>
+          <li>Weather forecasts</li>
+          <li>Pest alerts</li>
+          <li>Expanded capabilities to work with a larger team</li>
+          <li>Possibility to add up to 10 advisors in managing your crops</li>
+        </ul>
+        <h3>$ 300</h3>
+      </div>
+    </div>
+  </section>
+
+  <!--Contacts-->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2 class="contact-title">Contact Us</h2>
+      <form id="contact-form" action="process_form.php" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required aria-required="true" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+      <div id="success-message" style="display: none;">
+        <p>Your inquiry has been successfully sent. We will get back to you.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // You can add additional scripts here if needed
+</script>
+</body>
